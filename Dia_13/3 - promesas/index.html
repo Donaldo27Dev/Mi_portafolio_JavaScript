@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesas</title>
+</head>
+<body>
+    <script>
+        function obtenerUsuarios(){
+            return new Promise(function(resolve, reject){
+                let xhr = new XMLHttpRequest();
+                xhr.open('GET', 'https://jsonplaceholder.typicode.com/users'); //ABRIR PETICIÓN AL SERVIDOR '.open'
+                xhr.onload = function(){ //Llamada al evento '.onload' para recibir la respuesta
+                    if(xhr.status === 200){ //SÍ LA RESPUESTA FUE EXITOSA, el estatus de la solicitud es IDENTICO a '200'
+                        
+                        resolve(JSON.parse(xhr.responseText)); //LA RESPUESTA DEL SERVIDOR LA PASAMOS A FORMATO 'JSON'
+                        
+                    }else{
+                            
+                        reject(xhr.status); //IMPRIMIR EL ERROR SI ES EL CASO
+                    }
+                }
+                xhr.send(); //ENVIAR LA PETICIÓN AL SERVIDOR
+            });
+        }
+
+        obtenerUsuarios().then(function(usuarios){  //MANEJAR LA RESPUESTA POSITIVA DE LA SOLICITUD
+            console.log(usuarios);
+        }).catch(function(error){   //MANEJAR LA REPUESTA NEGATIVA DE LA SOLICITUD  
+            console.error(error);
+        })
+        
+        
+    </script>
+</body>
+<!--                                            CODIGO JAVASCRIPT CON METODO 'Promise.all()'
+    let promesa1 = new Promise(function(resolve, reject){
+            setTimeout(resolve, 2000, 'hola');
+
+        });
+
+        let promesa2 = new Promise(function(resolve, reject){
+            setTimeout(resolve, 4000, 'Mundo');
+
+        });
+
+        //Este método '.all' toma como parametro A UN ARRAY DE PROMESAS y 
+        //ESPERA A QUE TODAS LAS PROMESAS SE ACOMPLETEN ANTES DE CONTINUAR
+        Promise.all([promesa1, promesa2]).then(function(valores){
+            console.log(valores);
+        });
+
+        console.log("El código siue su camino");
+-->
+
+
+<!--                                               CODIGO JAVASCRIPT DE OTRAS PROMESAS
+
+    // INSTANCIA DE UN OBJETO PROMESA CON NOMBRE 'miPromesa'
+        let miPromesa = new Promise(function(resolve, reject){
+            setTimeout(function(){
+                let error = true;
+                if(error){
+                    reject('La promesa ha fallado')
+                }else{
+                resolve('La promesa se ha cumplido');
+                }
+            })      
+        }) 
+
+        //EL método '.then' se encarga de manejar el caso donde la promesa fue cumplida o con valor 'resolve'
+        miPromesa.then(function(resultado){ 
+            console.log(resultado);
+        }).catch(function(error){ //'.catch' nos permite manejar el error de una promesa, a traves de una función
+            console.log(error);
+        });
+-->
+</html>

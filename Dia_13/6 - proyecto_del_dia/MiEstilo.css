@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 40%;
+    margin: 0 auto;
+    background-color: lightgray;
+}
+
+h1 { 
+    color: green; 
+    font-family: "Great Vibes", cursive;
+    font-weight: normal; 
+    text-shadow: 0 1px 1px #fff; 
+}
+
+.encabezado img {
+    height: 150px;
+    width: 150px;
+    padding: 5%;
+}
+
+.espera img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    visibility: hidden; 
+}
+
+.cuerpo {
+    background-color: lightgreen;
+    border-radius: 5%;
+    margin: 10px;
+    color: black;
+}
+
+.cuerpo div {
+    margin: 20px;
+}

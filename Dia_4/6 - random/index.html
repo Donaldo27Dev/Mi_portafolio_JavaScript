@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionabilidad de Random</title>
+</head>
+<body>
+    <h1>Numero aleatorio:<span id="numAleatorio">---</span></h1>
+    <button onclick="CrearNumeroAleatorio(15, 20)">Crear Numero Aleatorio</button>
+    
+
+    <script>
+    
+    let elemntoAleatorio = document.getElementById("numAleatorio"); 
+
+    function CrearNumeroAleatorio(minimo, maximo){
+    maximo = maximo + 1;
+    //Math.floor redondea hacia abajo, eliminando los decimales
+    //Math.random genera numeros aleatorios entre 0 y 1, ejemplo 0.876562, 0.28387464, 0.19099787 etc.
+
+    //Ejemplo de Maximo y Minimo con random
+    //Primero se multiplica la función "ramdon" por la diferencia entre el maximo menos el minimo, ejemplo:
+    // maximo = 20
+    // minimo = 15
+    // 20 - 15 = 5
+    // Supongamos que random nos arroja un valor de 0.9 entonces:
+    // 0.9 * 5 = 4.5 
+    // 4.5 le vamos a sumar el minimo que nos dio, entonces
+    // 4.5 + 15 = 19.6 
+    // Pero como utilizamos la función Math.floor para redondear hacia abajo, el resultado final es de 19
+
+    resultado = Math.floor(Math.random() * (maximo - minimo) + minimo);
+    elemntoAleatorio.textContent = resultado ;
+    }
+
+    </script>
+</body>
+</html>

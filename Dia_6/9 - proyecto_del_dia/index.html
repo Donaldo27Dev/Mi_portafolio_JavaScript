@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="miEstilo.css">
+    <script src="miScript.js"></script>
+    <title>Resumen de Calificaciones</title>
+</head>
+<body>
+    <h1>Boletin Estudiantil</h1>
+    <h2>Alumno: Angel Donaldo López Cosme</h2>
+
+    <div class="cali">
+        <h3>Notas:</h3>
+        <button onclick="mostrarLista()">Mostrar Calificaciones</button>
+        <ul id="listaCali"></ul> <!--Lista Desordenada-->
+    </div>
+
+    <div class="datosExtras">
+        <h3>Promedio</h3>
+        <button onclick="calcularPromedio()">Calcular Promedio</button>
+        <h4 id="mostrarPromedio"></h4>
+        <br>
+        <h3>Calificación más Alta</h3>
+        <button onclick="notaMasAlta()">Obtener notas mas alta</button>
+        <h4 id="mostrarCaliAlta"></h4>
+        <br>
+        <h3>Plazos</h3>
+        <button onclick="hayAplazos()">Ver plazos</button>
+        <h4 id="mostrarPlazos"></h4>
+
+    </div>
+
+</body>
+</html>

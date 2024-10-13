@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <title>Loop Do While</title>
+</head>
+<body>
+    <script>
+        //prompt permite que el usuario pueda ingresar alguna info. al navegador, este valor lo podemos almacenar en una variable
+        
+        //CODIGO COMENTADO:
+        //let nombr = prompt("Bienvenidoo!!", "Ingresa tu nombre aquí");
+
+        let nombre;
+
+        //Siempre se ejecutará al menos una vez, sin importar la condición, 
+        do{
+
+            nombre = prompt("Dime tu nombre")
+
+        } while(nombre != "cosme");
+
+        //con "document.write()" yo puedo escribir codigo HTML y conbinarlo con JS
+        document.write("<h1>Este es mi nombre</h1>" + "<h2>" + nombre + "</h2>");
+
+    
+        //CODIGO COMENTADO:
+        /*
+        let vidas = 5;
+        do{
+            console.log("Vidas " + vidas);
+            vidas--;
+
+        } while(vidas >= 0);
+        */
+    </script>
+    
+</body>
+</html>

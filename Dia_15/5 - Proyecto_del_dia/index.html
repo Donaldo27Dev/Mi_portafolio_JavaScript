@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/usando_tel.png">
+    <link rel="stylesheet" href="miEstilo.css">
+    <script src="MiScript.js"></script>
+    <title>GD</title>
+</head>
+<nav class="encabezado">
+    <h1>Gestor de Dispositivos</h1>
+</nav>
+
+<body onload="Requisitar_Elementos()">
+    <section>
+        <img class='imagenes' src="img/seleccion_tel.png" alt="Imagen alusiva a un smartphone">
+        <article class="tablaPrincipal">
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Color</th>
+                        <th>Almacenamiento</th>
+                        <th>Procesador</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo_tbl">
+                </tbody>
+            </table>
+        </article>
+        <article class="art_crud">
+            <div class="caja">
+                <h3 class="encabezado_caja">Consulta un dispositivo</h3>
+                <br>
+                <input type="text" id="txt_id_disp" placeholder="Ingresa el ID">
+                <div id="txtArea">
+                </div>
+                <br>
+                <button class="btnConsultar" onclick="Buscar_elemento()">Consultar</button>
+            </div>
+
+            <div class="caja">
+                <h3 class="encabezado_caja">Agregar un Dispositivo</h3>
+                <input id="selec_marca" type="text" placeholder="Marca"><br>
+                <input id="selec_modelo" type="text" placeholder="Modelo"><br>
+                <input id="selec_color" type="text" placeholder="Color"><br>
+                <input id="selec_almacena" type="text" placeholder="Almacenamiento(GB)"><br>
+                <input id="selec_procesador" type="text" placeholder="Procesador"><br>
+                <br>
+                <button class="btnAgregar" onclick="AgregarElemento()">Registrar</button>
+            </div>
+
+            <div class="caja">
+                <h3 class="encabezado_caja">Eliminar un Registro</h3>
+                <input type="text" id="txtEliminar" placeholder="Ingresa el ID">
+                <br>
+                <button class="btnEliminar" onclick="EliminarElemento()">Eliminar</button>
+            </div>
+        </article>
+    </section>
+</body>
+
+</html>

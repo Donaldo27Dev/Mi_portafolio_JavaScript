@@ -1,0 +1,93 @@
+body{
+    background-color: beige;
+}
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: darkblue;
+}
+
+label{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: darkslategrey;
+}
+
+.cali{
+    width: 500px;
+    height: 195px;
+
+    margin: 5px;
+    margin-left: 0px;
+    color: black;
+    
+    padding: 10px;
+    border-radius: 10px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: darkgrey;
+}
+
+div button{
+    width: 180px;
+    height: 25px;
+    background-color: darkgreen;
+    color: white;
+    font-weight: bold;
+
+    border-radius: 3px;
+    margin: 5px;
+    margin-left: 0px;
+
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+
+}
+
+div button:hover{
+    color: green;
+    background-color: white;
+    border-style: inset;
+
+}
+
+.datosExtras{
+    width: 500px;
+    height: 400px;
+
+    margin: 5px;
+    margin-left: 0px;
+    color: white;
+    
+    padding: 10px;
+    border-radius: 10px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: darkblue;
+
+}
+
+.principal{
+
+    margin: 30px;
+    margin-left: 0px;
+    color: black;
+    padding: 10px;
+
+}
+
+.imagenes{
+
+    padding: 10px;
+    margin: 10px;
+    margin-left: 0px;
+    color: white;
+    
+    padding: 10px;
+    border-radius: 5px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: lightblue;
+    
+
+
+}

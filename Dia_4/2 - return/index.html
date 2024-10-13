@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Primer Numero</p>
+    <input id="Num1" type="number" >
+    <p>Segundo Numero</p>
+    <input id="Num2" type="number"><br><br>
+    <button onclick="MostrarResultado()">Calcular</button>
+    <h2 id="TextoResultado">Resultado</h2>
+
+    <script>
+        function Sumar(numero1, numero2){
+            suma = +numero1 + +numero2;
+            return suma;
+
+        }
+
+        function MostrarResultado(){
+            //Asignacion de valores. de html a javascript con el document.getElementById 
+            let elemNumero1 = document.getElementById("Num1");
+            let elemNumero2 = document.getElementById("Num2");         
+            let elemTexto = document.getElementById("TextoResultado");
+            let elemSuma = Sumar(elemNumero1.value, elemNumero2.value);
+
+            elemTexto.textContent = elemSuma;
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensamiento booleano</title>
+</head>
+<body>
+    <p>Contiene información en su código, etiqueta script</p>
+    
+</body>
+    <script>
+        //funcionamiento de booleanos
+        //asignar un valor, true o false, le asigno true
+        let angel_osea_yo = true;
+
+        //cambia su valor a falso
+        angel_osea_yo = 5 > 10;
+
+        //Si lo dejo vació o con el valor 0, toma el valor falso
+        Boolean("");
+        Boolean(0);
+
+        //Si tiene contenido, ya sea un número(incluyendo negativos), o un string toma el valor de true
+        Boolean("angel");
+        Boolean(1);
+        Boolean(-9);
+
+        //Los errores los toma como falso
+        Boolean(1/"fede");
+
+        //La palabra como tal "true" vale 1, en cambio la palabra "false" vale 0, ejemplo
+        //56 + true = 57
+        //56 - false = 56
+
+//=========================================================================================================================================
+        //OPERADORES LOGICOS
+
+        /*  OPERADOR       |             FUNCIONAMIENTO
+                           |
+            ==             |          verifica si tiene el mismo valor
+            !=             |          no es igual, diferente que
+            ===            |          Estrictamente igual, compara el valor y el tipo de dato que son 
+            !==            |          Estrictamente des-igual, compara que el valor y el tipo de dato NO sean iguales
+            >              |          Mayor que 
+            >=             |          Mayor o igual que
+            <              |          Menor que
+            <=             |          Menor o igual que
+
+            &&             |          Y, para cumplir dos condiciones
+            ||             |          0, se cumple esta condicion, oh la otra conidición opcional en su caso
+
+        */
+
+        //Las comparaciones de las cademas se realizan a traves del abecedario, y en ese orden devuelven un booleano (true or false)
+        "fede" > "angel"
+
+
+    </script>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Hour</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body onload="ComenzarReloj(), mostrarFecha()">
+    <input type="number" id="tiempoElegido">
+    <button onclick="ComenzarTiempo()">Alarma</button>
+    <h1 id="textoAlarma">00:00:00</h1>
+    
+    <audio id="audioAlarma">
+    <source src="sonidos/alarma.mp3" type="audio/mpeg">
+    Sonido no habilitado
+    </audio>
+
+    <script>
+        let elementoSegundos = document.getElementById("tiempoElegido");
+        let ElementoTextoAlarma = document.getElementById("textoAlarma");
+        let ElementoSonidoAlarma = document.getElementById("audioAlarma");
+
+        function ComenzarTiempo(){
+            setTimeout(TiempoCumplido,1000 * elementoSegundos.value);
+        }
+        function TiempoCumplido(){
+            //textoAlarma.textContent = "ENCENDIDO"
+            ElementoTextoAlarma.style.color = "red";
+            ElementoSonidoAlarma.play();
+        }
+        function ComenzarReloj(){
+            setInterval(ticTac, 1000);
+        }
+        function ticTac(){
+            let tiempoActual = new Date();
+            //Para darle un formato de "00" se convierte todo a string y con la funcion ".padStart" primero asignamos el 
+            //largo maximo que debe de tener y que despues agregue un 0 como valor predeterminado
+            let hora = String(tiempoActual.getHours()).padStart(2,"0");
+            let minutos = String(tiempoActual.getMinutes()).padStart(2,"0");
+            let segundos = String(tiempoActual.getSeconds()).padStart(2,"0");
+
+            let textoHora = hora + ":" + minutos + ":" + segundos; 
+            ElementoTextoAlarma.textContent = textoHora;
+            console.log(textoHora);
+
+        }
+        function mostrarFecha() {
+            let fechacompleta = new Date();
+        
+        if(window.confirm("El tiempo se te termino")){
+            alert(fechacompleta.toLocaleDateString('es-ES')+" Tu calificacion es:");
+
+        }else{
+            alert("Mal, muy mal angel");
+
+        }
+            
+        }
+
+        
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="nombre"></div>
+
+    <script>
+        let datosJson;
+
+        //EL PRIMER PARAMETRO ES LA URL
+        //FUNCION 'FETCH' ENVIA UNA SOLICITUD GET,POST AL SERVIDOR, EN ESTE CASO AL ARCHIVO 'persona.json'
+        //LA FUNCIÓN DEVULEVE UNA PROMESA QUE SE RESULEVE CUANDO SE OBTENGA LA RESPUESTA DEL SERVIDOR
+
+
+        fetch('persona.json')
+        .then(res => res.json()) //SE LLAMA A LA FUNCIÓN '.then' traducido seria 'una vez que...' LA PROMESA SE HALLA REALIZADO CORRECTAMENTE O SE RECÍBA UNA RESPUESTA
+        .then((salida) => { //CUALQUIER VARIABLE (A EXEPCIÓN DE PALABRAS RESERVADAS) PUEDE SER LA SALIDA DE NUESTRA PROMESA 
+            datosJson = salida;
+            let elementotexto = document.getElementById('nombre');
+            elementotexto.textContent = datosJson.nombre; //ACEDO AL ELEMENTO 'nombre' DEL JSON 
+        })
+
+
+
+    </script>
+    
+</body>
+</html>

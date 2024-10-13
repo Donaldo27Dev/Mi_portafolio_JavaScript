@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="suma.png">
+    <link rel="stylesheet" href="miEstilo.css">
+    <script src="miScript.js"></script>
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <!-- Entradas -->
+    <input type="text" placeholder="CANTIDAD UNO" id="ctd1">
+    <input type="text" placeholder="CANTIDAD DOS" id="ctd2"><br>
+    <!-- Botones -->
+    <button onclick="CrearSuma()">Suma</button>
+    <button onclick="CrearResta()">Resta</button>
+    <button onclick="CrearMultiplicacion()">Multiplicación</button>
+    <button onclick="CrearDivision()">Division</button><br>
+
+    <div class="coldobles">
+    <button onclick="CrearRaizCuadrada()">Raiz Cuadrada</button>
+    <button onclick="CrearPotencia()">Potencia</button><br>
+    <button onclick="CrearValorAbsoluto()">Valor abolosuto</button>
+    <button onclick="CrearRandom()">Random</button><br>
+    </div>
+
+    <h2>Resultado</h2>
+    <input placeholder="RESULTADO" id="res"><br><br>
+
+    <div class="coltriples">
+    <button onclick="CrearRound()">Round</button>
+    <button onclick="CrearFloor()">Floor</button>
+    <button onclick="CrearCeil()">Ceil</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+
+p{
+    text-align: center;
+}
+.normal{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+}
+
+.destacado{
+    background-color: khaki;
+    padding: 20px;
+    font-size: 18px;
+}

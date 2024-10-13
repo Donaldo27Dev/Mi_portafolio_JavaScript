@@ -1,0 +1,26 @@
+body{
+    background-color: bisque;
+
+}
+
+.principal{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+#informacion{
+    text-align: center;
+}
+
+a[href*=".edu"]{
+    background-color: aqua;
+}
+
+h1:hover{
+    color: blue;
+
+}
+
+.principal::first-line{
+    background-color: lightslategray;
+}

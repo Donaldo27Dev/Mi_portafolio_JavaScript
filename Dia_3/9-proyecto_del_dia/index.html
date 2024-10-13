@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/microservice.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Proyecto del Dia</title>
+</head>
+<body onload="ComenzarCuentaRegresiva()"> <!-- SE MANDA A LLAMAR A LA FUNCION "ComenzarCuentaRegresiva" PARA COMENZAR EL JUEGO-->
+    <div class="badge bg-primary text-wrap" style="width: 100%; font-size: 20px">
+        <p class="text-center">EXAMEN DE PROGRAMACION PRIMER PARCIAL.</p>
+    </div>
+    <h1>Tiempo:</h1>
+    <h2 id="txtTiempoInicial"></h2>
+
+    <p class="text-center">¿Cuanto 20 + 644?</p>
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Respuesta</span>
+        <input id="txt1" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
+
+    <p class="text-center">¿Que significa "Class" en java?</p>
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Respuesta</span>
+        <input id="txt2" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
+
+    <p class="text-center">¿Que significa la expesion 2!=0?</p>
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Respuesta</span>
+        <input id="txt3" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
+
+    <p class="text-center">¿Que palabra reservada se utiliza en JS para declarar una constante?</p>
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Respuesta</span>
+        <input id="txt4" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
+
+    <p class="text-center">¿Que palabra reservada se utiliza en JS para declarar una variable?</p>
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Respuesta</span>
+        <input id="txt5" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    </div>
+
+    <div class="grid text-center">
+        <button onclick="VolverIntentar()" type="button" class="btn btn-outline-warning" id="btnReiniciar">Reiniciar</button>
+        <button onclick="Finalizo()" type="button" class="btn btn-outline-success" id="btnEnviar">Enviar</button>
+    </div>
+
+    <audio id="audioPerdiste">
+        <source src="gameover.mp3" type="audio/mpeg">
+        No se escucha el sonido
+    </audio>
+
+    <script>
+    
+    let tiempoTerminado;
+    let intervaloDeTiempo;
+       
+    function ComenzarCuentaRegresiva(){
+        tiempoTerminado = setTimeout(tiempoCumplido, 30000);
+        intervaloDeTiempo = setInterval(ticTac, 1000); //revisar siempre la sintaxis de la funcion que se esta pasando
+
+        document.getElementById("txtTiempoInicial").textContent = 30; //se asigna un valor con el textCotent
+    
+    }
+
+    function ticTac(){
+        let tiempo = document.getElementById("txtTiempoInicial").textContent;
+        document.getElementById("txtTiempoInicial").textContent = tiempo - 1; //se hace la cuenta regresiva restandole 1 a la variable tiempo
+
+    }
+    
+
+    function tiempoCumplido(){
+        clearInterval(intervaloDeTiempo);
+        document.getElementById("txtTiempoInicial").textContent = 0;
+        document.getElementById("audioPerdiste").play();
+        alert("GAME OVER: Se agotó el tiempo. Intentalo de nuevo.");
+
+    }
+
+    function Finalizo(){
+        clearTimeout(tiempoTerminado); // limpia la funcion setTimeOut
+        clearInterval(intervaloDeTiempo); //para cancelar el intervalo o interrumpirlo
+
+        let fecha = new Date(); //fecha sin formato
+        let respuestas1 = document.getElementById("txt1").value;
+        let respuestas2 = document.getElementById("txt2").value;
+        let respuestas3 = document.getElementById("txt3").value;
+        let respuestas4 = document.getElementById("txt4").value;
+        let respuestas5 = document.getElementById("txt5").value;
+
+        let msg = fecha.toLocaleDateString("es-Es") + "\n" +
+                        "1. " + respuestas1 + "\n" + 
+                        "2. " + respuestas2 + "\n" +
+                        "3. " + respuestas3 + "\n" +
+                        "4. " + respuestas4 + "\n" +
+                        "5. " + respuestas5;
+
+        alert("Tus respuestas fueron las siguientes: " + "\n" + msg);
+
+    }
+
+    function VolverIntentar(){
+        location.reload(); //recargar la pagina
+
+    }
+
+
+
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>

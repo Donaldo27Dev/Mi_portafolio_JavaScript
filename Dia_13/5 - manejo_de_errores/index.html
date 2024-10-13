@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Errores de 3 maneras distintas</title>
+</head>
+<body>
+    <script>
+        /*
+        //CALLBACK
+        function SumarNum(a, b, callback){
+            setTimeout(function(){
+                if(typeof a != 'number' || typeof b != 'number'){
+                    return callback(new Error('Alguno de los argumentos, no es un número'));
+                }
+                callback(null, a + b);
+            }, 1000);
+        }
+
+        SumarNum(1, 4, function(error, resultado){
+            if(error){
+                console.error(error);
+            }else{
+                console.log(resultado);
+            }
+        });
+        */
+
+
+        
+        //PROMESAS
+        function SumarNum(a, b){
+            return new Promise( function ( resolve, reject ){
+                setTimeout(function(){
+                    if(typeof a != 'number' || typeof b != 'number'){
+                        reject(new Error("Ambos argumentos deben ser numeros"));
+                    }else{
+                        resolve(a + b);
+                    }
+                }, 1000);
+            })
+        }
+
+        SumarNum(1, 4)
+        .then(function(resultado){
+            console.log(resultado);
+        })
+        .catch(function(error){
+            console.error(error);
+        })
+        
+
+
+        
+        //ASYNC - AWAIT
+        async function SumarNum(a, b){
+            if(typeof a != 'number' || typeof b != 'number'){
+                throw new Error('Alguno de los argumentos no es un numero');
+            }
+            return a + b;
+        }
+
+        async function manejarError(){
+            try {
+                let resultado = await SumarNum('8', 9);
+                console.log(resultado);
+            } catch (error) {
+                console.error(error.message);
+            }
+        }
+        
+        manejarError();       
+    </script>
+</body>
+</html>

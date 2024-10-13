@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="miEstilo.css">
+    <link rel="shortcut icon" href="img/sentimientos.png">
+    <script src="miScript.js"></script>
+    <title>Cine</title>
+</head>
+<nav>
+    <h1>Cine</h1>
+    <h4>Recomendaciones de peliculas por Genero según tu edad</h4>
+</nav>
+<body>
+    <p>Ingresa tu edad</p>
+    <input type="text" id="txtEdad">
+    <div class="btn">
+        <button onclick="recomendar('comedia')">Comedia</button>
+        <button onclick="recomendar('drama')">Drama</button>
+        <button onclick="recomendar('musical')">Musical</button>
+        <button onclick="recomendar('crimen')">Crimen</button>
+        <button onclick="recomendar('terror')">Terror</button>
+    </div>
+    <p>Se recomienda: </p>
+    <p id="respuesta">...</p>
+</body>
+</html>

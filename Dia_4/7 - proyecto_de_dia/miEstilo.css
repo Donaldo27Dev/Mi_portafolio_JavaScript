@@ -1,0 +1,48 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+button{
+    color: white;
+    background-color: green;
+    border-style: hidden;
+    height: 30px;
+    width: 100px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px; /* redondea las puntas */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    /* font-weight: bold; */
+}
+
+button:hover{
+    color: green;
+    background-color: white;
+    border-style: inset; /* coloca un margen negro cuando el cursor pása sobre el boton */
+    text-decoration: solid;
+}
+
+input{
+    color: black; 
+    background-color: lightblue;
+    border-color: blue;
+    border-radius: 5px;
+    padding: 10px; /* espacio hacia dentro */
+    margin: 3px;
+    
+
+}
+
+.coldobles button{
+    height: 50px;
+    width: 225px;
+
+}
+
+.coltriples button{
+    height: 30px;
+    width: 143px;
+
+}
