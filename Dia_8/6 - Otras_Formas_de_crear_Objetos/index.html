@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otras formas de crear Objetos</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        // Se crea un objeto apartir de Object()
+        let coche1 = new Object();
+
+        // Se puede agegrar de diferentes maneras las propiedades al objeto.
+        // 1.- Uso del "." y asigna el valor.
+        coche1.marca = 'Chevrolet';
+        // 2.- Uso de los "[]" y asigna el valor.
+        coche1['modelo'] = 'Prisma';
+        // 3.- Crear una función en mi objeto.
+        coche1.encender = function (){
+            alert("Coche encendido");
+        }
+
+        // Otra manera de crar un objeto a traves de Object().
+        let perro1 = new Object({nombre: 'Simba'});
+
+        // Crear una instancia a partir de un objeto ya existente.
+        // Algunos navegadores pueden no ser compatibles con el metodo create().
+        let coche2 = Object.create(coche1);
+    </script>
+</html>

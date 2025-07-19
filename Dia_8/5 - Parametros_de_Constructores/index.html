@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructores Con parámetros</title>
+</head>
+<body>
+    
+</body>
+<script>
+        // Constructor Perro()
+        function Perro(raza, edad){
+            this.patas = 4;
+            this.raza = raza;
+            this.edad = edad;
+            this.ladrar = function () {
+                console.log("Guau")
+            }
+        }      
+
+        // Instancia del Objto Perro
+        let simba = new Perro("Shih Tzu", 4);
+        let hanny = new Perro("Chihuahua", 16);
+        let reina = new Perro("Caniche", 15);
+
+        // Constructor para un Empleado()
+        function Empleado(nombre, apellido, edad, cargo){
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.edad = edad;
+            this.cargo = cargo;
+            this.presentarse = function(){
+                console.log(`Mi nombre es ${this.nombre} ${this.apellido}, soy ${this.cargo}, y tengo ${this.edad} añios de edad`)
+            }
+        }
+
+
+</script>
+</html>

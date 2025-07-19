@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palabra This</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Se declara e inicializa mi objeto perro.
+    let perro = {
+        nombre: "Hanny",
+        raza: "Chihuahua",
+        edad: 18,
+        ladrar() {
+            console.log("Guau");
+        },
+        saludar(){
+            console.log("Hola, me llamo " + this.nombre); // This hace referencia al objeto perro en este contexto.
+        }
+    };
+
+    let perro2 = {
+        nombre: "Reina",
+        raza: "Caniche",
+        edad: 15,
+        ladrar() {
+            console.log("Guau");
+        },
+        saludar(){
+            console.log("Hola, me llamo " + this.nombre);
+        }
+    };
+
+</script>
+</html>

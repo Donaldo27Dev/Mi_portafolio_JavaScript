@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Objetos</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Se declara e inicializa mi objeto perro.
+    let perro = {
+        nombre: "Hanny",
+        raza: "Chihuahua",
+        edad: 18,
+        ladrar() {
+            console.log("Guau");
+        },
+        saludar(){
+            console.log("Hola, me llamo " + this.nombre);
+        }
+    };
+
+    function cumplirAnios(){
+        // Cambiar el valor de una de las propiedades de mi Objeto, en este caso "edad".
+        perro.edad += 1;
+    };
+    
+    // Agregar una propiedad a mi objeto 'perro', en este caso "colorOjos" con el valor de "Cafe".
+    perro["colorOjos"] = "Cafe";
+
+</script>
+</html>

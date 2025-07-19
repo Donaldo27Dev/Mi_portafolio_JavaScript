@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop for in</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        // Constructor Perro()
+        function Perro(raza, edad, color){
+            this.patas = 4;
+            this.raza = raza;
+            this.edad = edad;
+            this.color = color;
+            this.ladrar = function () {
+                console.log("Guau")
+            }
+        }      
+
+        // Instancia del Objto Perro
+        let simba = new Perro("Shih Tzu", 4, "Marron");
+        let hanny = new Perro("Chihuahua", 16, "Marron Claro");
+        let reina = new Perro("Caniche", 15, "Negro");
+
+        // El loop "For in" me permite recorrer cada propiedad de mi objeto,
+        // en este caso "hanny" seria el objeto y "caracteristica" funcionaría tanto como la propiedad y el valor del esa propiedad.
+        for(let caracteristica in hanny){
+            console.log(`${caracteristica} : ${hanny[caracteristica]}`);
+        }
+
+    </script>
+</html>
