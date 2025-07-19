@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Subclases</title>
+    </head>
+    <body>
+        <script>
+            
+            // Clase padre "Deportista" 
+            class Deportista{
+                constructor(nombre, apellido){
+                    this.nombre = nombre;
+                    this.apellido = apellido;
+                }
+            }
+
+            // La clase hija "Futbolista" hereda las propiedades 'nombre' y 'apellido' del la clase padre "Deportista",
+            // a traves de la palabra reservada "extense" e indicando los atributos dentro de la palabra "super", ejemplo:
+            // "super(propiedad1, propiedad2, propiedad3...etc)"
+            class Futbolista extends Deportista{
+                constructor(nombre, apellido, goles){
+                    super(nombre, apellido);
+                    this.goles = goles;
+                }
+            }
+            
+        </script>
+    </body>
+</html>
