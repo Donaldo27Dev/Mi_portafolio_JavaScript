@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;    /* Centra verticalmente */
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3em;
+}
+
+button {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    background-color: rgb(36, 90, 161);
+    border-radius: 7px;
+    padding: 10px;
+}
+
+button:hover{
+    color: rgb(36, 90, 161);
+    background-color: white;
+}

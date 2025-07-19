@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipos en JS</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // ¿Qué son los prototipos?
+    /*
+        Son el mecanismo mediante el cual los objetos pueden heredar propiedades y métodos de otros objetos.
+        Cada objeto en JavaScript tiene una propiedad interna llamada [[Prototype]], que apunta a otro objeto, conocido como su prototipo.
+        Esta relación forma una cadena de prototipos (Prototype Chain) que JavaScript recorre cuando intenta acceder a una propiedad o método que no encuentra directamente en el objeto.
+
+        Esta característica permite la reutilización de código, la herencia entre objetos y es la base del modelo orientado a objetos en JavaScript.
+    */
+    let perro = {nombre: 'hanny'};
+
+    // Creo una nueva instancia a partir de otra con el metodo "create()" del Objeto "Object", y esta hereda sus mismas propiedades y métodos.
+    let perro1 = Object.create(perro);
+</script>
+</html>

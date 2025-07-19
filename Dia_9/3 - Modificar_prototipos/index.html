@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificación de Prototipos</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function Perro(nombre){
+        this.nombre = nombre;
+    }
+
+    function Libro(autor, titulo, cantPaginas){
+        this.autor = autor;
+        this.titulo = titulo;
+        this.cantPaginas = cantPaginas;
+    }
+
+    let libro1 = new Libro('Stephen King', 'Carrier', 524);
+    
+    // El siguiente bloque agregar una funcion a nuestro constructor "Libro" a traves de la propiedad ".prototype" 
+    // esto permite que las instancias que se generen a apartir del objeto constructor "Libro" puedan heredar sus metodos y propiedades en cadena. 
+    Libro.prototype.abrirLibro = function(){
+        alert(this.titulo);
+    }
+    
+    // Es aconsejable que cuando se agreguen propiedades a través del ".prototype" sean valores constantes y no
+    // NO dinámicos, ejemplo.
+    Perro.prototype.patas = 4; 
+
+    // Ejemplo de BUENA PRACTICA con prototipos:
+    // (Definir las propiedades en el CONSTRUCTOR y las funciones agregarlas a traves de ".prototype" apuntando al constructor).
+    function UnObjeto(){
+        this.a = a;
+        // N cantidad de propiedades
+    }
+    // Definir metodos dentro de la propiedad "prototype".
+    UnObjeto.prototype.metodo1 = function(){}
+    UnObjeto.prototype.metodo2 = function(){}
+
+
+</script>
+</html>
