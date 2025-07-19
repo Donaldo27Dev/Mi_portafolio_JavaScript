@@ -12,8 +12,11 @@ h2{
 }
 
 .cali{
+    display: flex;
     width: 500px;
-    height: 195px;
+    height: auto;
+    align-items: center;
+    flex-flow: column wrap;
 
     margin: 5px;
     margin-left: 0px;
@@ -51,8 +54,11 @@ div button:hover{
 }
 
 .datosExtras{
+    display: flex;
     width: 500px;
-    height: 400px;
+    height: auto;
+    flex-flow: column wrap;
+    align-items: center;
 
     margin: 5px;
     margin-left: 0px;
@@ -64,4 +70,8 @@ div button:hover{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: darkblue;
 
+}
+
+p {
+    font-size: 15px;
 }

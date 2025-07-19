@@ -9,7 +9,7 @@ function consultarTabla(){
 
     //Producir y mostrar resultados
     for(x=1; x<=10; x++){
-        //Calcular Resultadi
+        //Calcular Resultado
         let numeroResultado = numeroTabla * x; 
 
         //Armar string con resultado

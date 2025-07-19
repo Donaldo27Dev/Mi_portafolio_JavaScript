@@ -1,5 +1,5 @@
 //Crear el array con las calificaciones
-let notas = [3.8, 6.8, 8.2, 9.2, 9.9];
+let notas = [3.8, 6.8, 8.2, 9.2, 9.9, 2.2, 3.9];
 
 function mostrarLista(){
     //Obtener la tabla
@@ -26,7 +26,7 @@ function calcularPromedio(){
     let verPromedio = document.getElementById("mostrarPromedio");
     for(x = 0; x < notas.length; x++){
         let calFinal = notas[0] + notas[1] + notas[2] + notas[3] + notas[4];
-        promedio = calFinal / 5;   
+        promedio = calFinal / notas.length;   
         //console.log(promedio); 
     } 
     verPromedio.textContent = promedio;  
@@ -34,15 +34,35 @@ function calcularPromedio(){
 }
 
 function notaMasAlta(){
-    y = 0;
-    while(notas.length >= y){
-        console.log(notas[y])
-    ++y;
+    let calificacionMasAlta = document.getElementById("mostrarCaliAlta");
+    let contador = 0;
+    let valMayor = 0;
+    
+    while(notas.length > contador){
+        if(notas[contador] > valMayor){
+            valMayor = notas[contador];
+        }
+        console.log(notas[contador])
+    contador++;
     }
 
-
+    calificacionMasAlta.textContent = valMayor;
 }
 
 function hayAplazos(){
-
+    console.log(notas.length)
+    let plazo = document.getElementById("mostrarPlazos");
+    let contador = 0;
+    let aplazo = "No tiene ningún aplazo";
+    do{
+        console.log(contador);
+        if(notas[contador] < 4){
+            aplazo = "Sí tiene al menos un aplazo"
+            break;
+        }
+    contador++;
+    console.log(contador);
+    }while(notas.length < contador);
+       
+    plazo.textContent = aplazo;
 }
