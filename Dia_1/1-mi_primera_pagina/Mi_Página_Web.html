@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <head>
+        <title>Dia1_01-MiPrimeraPagina</title>
+        <!-- Etiqueta Script para Agregar codigo CSS (Hoja de estilos en cascada) -->
+        <style>body{background-color: Moccasin}</style>
+    </head>
+    <body>
+
+        <!-- Etiqueta Script para Agregar codigo JavaSrcipt y funcionalidad a la página -->
+        <script>
+            function ponerTituloRojo(){
+                // Modificacion del atributo .style de mi objeto <h1> para cambiar su color original
+                document.getElementById("titulo").style="color: red"
+
+                document.getElementById("subtitulo").style="color: Green"
+
+            }
+            function ponerTituloNegro() {
+                // Modificacion del atributo .style de mi objeto <h1> para cambiar a su color original
+                document.getElementById("titulo").style="color: black"
+
+                document.getElementById("subtitulo").style="color: black"
+            }
+        </script>
+        <!-- El evento "onmouseover" me pertime cambiar el color de mi objeto cuando el usuario pasa el cursor sobre este y 
+             El evento "onmouseout" me ayuda a regresar al color original de mi objeto, cuando el cursor sale de su contorno   -->
+        <h1 id="titulo" onmouseover="ponerTituloRojo()" onmouseout="ponerTituloNegro()">Bienvenido a JavaScript TOTAL</h1>
+        <h2 id="subtitulo" onmouseover="ponerTituloRojo()" onmouseout="ponerTituloNegro()">El primer paso es el más grande</h2>
+        <p>Esta página es una prueba</p>
+    </body>
+</html>
