@@ -1,15 +1,17 @@
-
+/* En este caso se aplica estilos sobre elemntos HTML y clases */
 p{
     text-align: center;
 }
+
+/* Para referenciar la selección de una clase se utiliza la estructura ".nombreDeClase" */
 .normal{
     font-family: Georgia, 'Times New Roman', Times, serif;
-
-
+    font-size: 15px;
+    border: solid 1px black;
 }
 
 .destacado{
     background-color: khaki;
     padding: 20px;
-    font-size: 18px;
+    font-size: 25px;
 }
