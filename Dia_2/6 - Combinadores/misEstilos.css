@@ -1,15 +1,21 @@
+/* Se puede combinar etiquetas HTML para establecer estilos como por ejemplo: */
+
+/* Aplicar color a los elementos <p> que estan dentro de un <div> */
 div p{
     color: green;
 }
 
+/* Aplicar una fuente más gruesa a los elementos <li>, los cuales son hijos directos de un elemento <ol> */ 
 ol > li{
     font-weight: bolder;
 }
 
+/* Cambiar el color de fondo a los elementos <h3> que estan despues de un <h2> */
 h2 ~ h3{
     background-color: lightskyblue;
 }
 
+/* Cambiar el color de fondo cuando se pase por encima de un elemento <p> que este dentro de un <div> y tenga el atributo: "align="left"" */
 div p[align="left"]:hover{
     background-color: gold;
 }
