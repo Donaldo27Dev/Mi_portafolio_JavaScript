@@ -1,26 +1,33 @@
+/* Ejemplo de selector por TIPO */ 
 body{
     background-color: bisque;
 
 }
 
+/* Ejemplo de selector por CLASE(.) */ 
 .principal{
     font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
 
+/* Ejemplo de selector por ID(#) */ 
 #informacion{
     text-align: center;
 }
 
+/* Ejemplo de selector de atributo con coincidencia parcial (*=) */ 
+/* Va a seleccionar todos los elementos <a> que en el atributo "href" contenga el texto ".edu" */
 a[href*=".edu"]{
     background-color: aqua;
 }
 
+/* :hover es una pseudo-clase que permite aplicar estilo cuando el usuario pasa el cursor del mouse sobre un elemento, en este caso <h1> */
 h1:hover{
     color: blue;
 
 }
 
+/* ::first-line es un pseudo-elemento, el cual permite aplicar estilos a partes específicas de un elemento, en este caso hace referencia a la primera lÍnea del texto */
 .principal::first-line{
     background-color: lightslategray;
 }
