@@ -1,32 +1,187 @@
-.txtprincipal{
-    border: 10px;
-    border-color: blue;
-    border-style: solid;
-    padding: 15px;
+/* Encabezado */
+.presentacion {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+
+    /* Contorno */ 
+    border: 5px solid #0B2E3C;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 3px;
+    background-color: white;
+}
+
+.presentacion header {
+    border: 2px;
+    padding: 5px;
+    margin: 0px;
+    text-align: center;
+    background-color: #0B2E3C;
+    color: white;
+}
+
+/* Barra de Navegacion */
+.presentacion nav {
+    display: flex; /* Definir el tipo de layout, en este caso flexbox */
+    flex-direction: row; /* Definir la orientacion de los elementos dentro del objeto */
+    flex-wrap: wrap; /* Define si los elementos flexibles deben ajustarse a varias líneas(wrap) o permanecer en una sola línea(nowrap por) */
+    
+    margin: 10px;
+}
+
+.presentacion nav li {
+    margin-left: 30px;
+    float: left;
+}
+
+.presentacion nav li a {
+    text-decoration: none;
+}
+
+/* Contenido principal (section) */
+.flex-container {
+    /* Configuracion del layout */
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+
+    /* Centrar el contenido */
+    justify-content: center; /* Alinear los elementos de acuerdo a la propiedad flex-direction */
+    align-content: start; /* Alinear y manejar multiples lineas de contenido */
+
+    /* IMPORTANTE: definir una altura y anchura en mi objeto flex principal */
+    height: 1500px;
+    width: auto; /* Para aprovechar todo el espacio de la pantalla */
+    
+}
+
+
+.contenido_1 {
+    /* Configuracion el layout */
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /* Contorno */
+    border: 5px solid #0B2E3C;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 3px;
+
+    width: auto;
+
+}
+
+.contenido_1 p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    text-align: justify;
+    font-weight: bold;
+}
+
+#fotoPersonal {
+    /* Configuracion el layout */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center; /* Alinear los elementos de acuerdo al eje transversal, ejemplo: Si flex-direction es row, el eje transversal es vertical */
+
+    width: 100%;
+    height: 425px;
+
+}
+
+#fotoPersonal img{
+    width: 300px;
+    height: 400px;
+}
+
+.detalleImagen {
+    /* Configuracion el layout */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    
+    width: 100%;
+    height: 150px;
+}
+
+.detalleImagen img {
+    width: 100px;
+    height: 100px;
+}
+
+.contenido_2 {
+    /* Configuracion el layout */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 500px;
+    width: auto;
+
+    /* Centrar el contenido */
+    justify-content: center; 
+    align-items: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 5px solid #0B2E3C;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 5px;
+
+}
+
+.prueba_1 {
+    /* Configuracion el layout */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    border: 3px solid black;
+    width: 30%;
+    height: 400px;
+    padding: 6px;
     margin: 10px;
 
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
+    text-align: justify;
 }
 
-.fragmentos{
-    text-decoration: underline;
-    background-color: khaki;
+.prueba_1 h3 {
+    text-align: center;
+    font-size: 25px;
 
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    margin: 0;
+    
+    /* Contorno */
+    border: 1px solid #0B2E3C;
+    background-color: #0B2E3C;
+    border-radius: 5px;
+    color: white;
 }
 
-.foto{
-    border: 3px;
-    border-style: solid;
-    border-color: olive;
-    padding: 2px;
-}
 
-#P_clve{
-    text-decoration: underline;
-}
+/* Para dar estilos a la "pagina2.html" y "pagina3.html*/
+.contenido_3 {
+    /* Configuracion el layout */
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: auto;
 
-div a:hover{
-    color: red;
-    text-decoration: none;
+
+    /* Contorno */
+    border: 5px solid #0B2E3C;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 3px;
+
+    /* Dar formato y tamaño al texto */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    
 }

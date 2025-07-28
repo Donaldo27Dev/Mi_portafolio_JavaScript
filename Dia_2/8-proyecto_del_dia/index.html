@@ -1,42 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biografía</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
 
-    <div class="txtprincipal"> 
-    <h1>MI BIOGRAFÍA</h1>  
-        <a href="pagina2.html"><p>SOBRE MI MASCOTA...</p></a>
-        <a href="pagina3.html"><p>SOBRE MI FAMILIA...</p</a>
-        <a href="pagina4.html" target="_blank"><p>SOBRE MI NOVIA...</p></a>
+    <div class="presentacion">
+        <header>
+            <h1>Mi biografía</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="pagina2.html">Sobre mi mascota...</a>
+                </li>
+                <li>
+                    <a href="pagina3.html">Sobre mi familia...</a>
+                </li>
+                
+            </ul>
+        </nav>
     </div>
 
-    <div class="txtprincipal">
-    <img class="foto" src="imagenes/angel.jpeg" alt="Fotografía de Titulación" width="20%" aling="left" hspace="20">
-    <h2>SOBRE MI...</h2>
-    <p align="justify">Mi nombre es Angel Donaldo López Cosme, actualmente me encuentro cursando la carrera de "Desarrollo de Software Multiplataforma" en el Area de TIC'S,
-        <span class="fragmentos">me encanta aprender cosas nuevas</span>, me gustan los videojuegos y pasar tiempo en familia.
-    </p>
-    </div>
+    <section class="flex-container">
+        <article>
+            <h2>Un poco de mi: </h2>
+            <div class="contenido_1">
+            <p>
+                Mi nombre es Angel Donaldo López Cosme, soy egresado de la carrera de Ingeniería en desarrollo y gestión de software perteneciente al área de TIC'S de la
+                universidad tecnológica de Tecámac, me encanta aprender cosas nuevas de mi carrera, nuevas tecnologías y procesos que ayudan a mejorar el trabajo de los 
+                desarrolladores, algunas de las cosas que más me gusta hacer es pasar tiempo con mi familia, compartir momentos unicos con mis amigos y jugar videoJuegos 
+                en mi tiempo libre.
+            </p>
+            <div id="fotoPersonal">
+                <img src="imagenes/angel.jpg" alt="Fotografía de Titulación">
+            </div>
+            </div>
+        </article>
+        <article>
+            <h2>Algunos de mis lenguajes de programacion favoritos son:</h2>
+            <div class="contenido_2">
+                <div class="prueba_1">
+                    <h3>Java</h3>
+                    <div class="detalleImagen">
+                        <img src="./imagenes/java.png" alt="Imagen alusiva al lenguaje de programacion Java">
+                    </div>
+                    <p>
+                        Para mí sin duda JAVA es un lenguaje muy versátil para el desarrollo de software, tanto para aplicaciones simples como para apps con
+                        una mayor arquitectura en su diseño, eh trabajado con este lenguaje aprox. más de un año en el mantenimieinto y creación de funciones
+                        de un app web y sin duda me gustaría seguir trabajando con esta tecnología, es un lenguaje fuertemente tipado y se maneja por ley el 
+                        paradigna de la POO al momento de desarrollar con el.
+                    </p>
+                </div>
 
-    <div class="txtprincipal">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel beatae labore distinctio voluptatem eius quibusdam pariatur! Fuga omnis sit voluptatem molestias illo rerum! Asperiores unde, quia minus distinctio molestias iusto?
+                <div class="prueba_1">
+                    <h3>JavaScript</h3>
+                    <div class="detalleImagen">
+                        <img src="./imagenes/js.png" alt="Imagen alusiva al lenguaje de programacion JavaScript">
+                    </div>
+                    <p>
+                        Una tecnología muy relevante en el mundo del desarrollo web, mi experiencia con este lenguaje ha sido muy buena, eh creado algunas API´s
+                        e implementado funcionalidades en proyectos personales y es increible todo lo que un desarrollador puede hacer con este lenguaje, algo
+                        muy interesante es que también lo podemos implementar de lado del servidor, es decir, pordemos realizar un backend con NodeJS y Express 
+                        por ejemplo.
+                    </p>
+                </div>
 
-    <h3>Algunos de mis hobbies son...</h3>
-    <p><b>ESCUCHAR MÚSICA</b></p>
-    <img class="foto" src="https://media.istockphoto.com/id/1332083525/es/vector/hombre-sentarse-en-el-s%C3%ADmbolo-de-la-nota-musical-grande-y-escuchar-una-canci%C3%B3n-de-tel%C3%A9fono.jpg?s=612x612&w=0&k=20&c=n_joAwvimxmmfYEeuQ1wra-RS3clW-0l3Vdgabd5X4U=" alt="Imagen alusiva a la música" width="15%" aling="left" hspace="20">
-    <br>
-    <p><b>APRENDER</b></p>
-    <img class="foto" src="https://cursosmultimedia.es/wp-content/uploads/2021/03/formas-aprender.jpg" alt="Imagen alusiva al aprendizaje" width="15%" aling="left" hspace="20">
-    <br>
-    <p><b>VIDEOJUEGOS</b></p>
-    <img class="foto" src="https://biblored.gov.co/sites/default/files/2020-10/Videojuego.gif" alt="Imagen alusiva a videojuegos" width="20%" aling="left" hspace="20">
-    <br>
-    </div>
+                <div class="prueba_1">
+                    <h3>Python</h3>
+                    <div class="detalleImagen">
+                        <img src="./imagenes/piton.png" alt="Imagen alusiva a videojuegos">
+                    </div>
+                    <p>
+                        Un lenguaje de alto nivel en la programación que permite realizar apps y procesos de análisis de datos de manera eficiente. He tenido la 
+                        oportunida de construir API´s con él y entiendo que de verdad integra procesos y herramientas poderosas para su desarrollo, sin duda un 
+                        lenguaje increible.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </section>
 
 </body>
+
 </html>
